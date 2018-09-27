@@ -1,4 +1,3 @@
-
 public class BuggyUtilClient {
     public static void main(String[] args) {
         // First test case in Main
@@ -6,7 +5,10 @@ public class BuggyUtilClient {
         System.out.println("In: first = " + "\"Sean\"" +
                 ", last = " + "\"Flannery\"");
         System.out.println("Out: " +
-        StringUtils.makePurdueUsername("Sean", "Flannery"));
+                StringUtils.makePurdueUsername("Sean", "Flannery"));
+
+        // MathUtil test
+
     }
 }
 

@@ -4,8 +4,12 @@ public class MathUtils {
      * Divide a by b and return the result
      */
     public static double divideNumbers(int dividend, int divisor) {
+
+        // noooo don't divide by zero
+        if (divisor == 0) throw new java.lang.AssertionError();
+
         /* Do some casual division ... Super easy ... Shouldn't be any problems here */
-        double res = dividend / divisor;
+        double res = (double)dividend / (double)divisor;
         /* Return the DEFINITELY CORRECT result */
         return res;
     }
@@ -15,6 +19,10 @@ public class MathUtils {
      * Raise the number base to power exp
      */
     public static double raiseToPower(int base, int exp) {
+
+        // Edge case: Anything to the power of zero is one (except zero)
+        if (exp == 0) return (base == 0 ? 0 : 1);
+
         /* Set initial result to be just the number */
         int res = base;
 
@@ -28,7 +36,7 @@ public class MathUtils {
         /* Multiply the result by the base exp times
             Ex: base = 2, exp = 2
                --> res = 2, then res = 4 */
-        for (int i = 0; i < exp; i++) {
+        for (int i = 1; i < exp; i++) {
            res *= base; 
         }
 
@@ -39,7 +47,7 @@ public class MathUtils {
         }
         /* Otherwise, we are safe to just return the result */
         else {
-            return res;
+            return (double)res;
         }
     }    
 }

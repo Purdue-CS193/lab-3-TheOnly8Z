@@ -14,35 +14,35 @@ public class UtilTester {
         assertEquals(7, MathUtils.divideNumbers(21, 3), delta);
         assertEquals(20032006, MathUtils.divideNumbers(80128024,4), delta);
         assertEquals(13, MathUtils.divideNumbers(169, 13), delta);
-    }
+    } // Passed
 
     @Test
     public void testComplexDivision() {
         assertEquals(0.142857, MathUtils.divideNumbers(3, 21),  delta);
         assertEquals(6163694.153846, MathUtils.divideNumbers(80128024, 13), delta);
         assertEquals(0.384615, MathUtils.divideNumbers(5, 13), delta);
-    }
+    } // Passed
 
     @Test
     public void testBasicPositivePower() {
         assertEquals(2, MathUtils.raiseToPower(2, 1), delta);
         assertEquals(25, MathUtils.raiseToPower(5, 2), delta);
         assertEquals(65536, MathUtils.raiseToPower(2, 16), delta);
-    }
+    } // Passed
 
     @Test
     public void testComplexPositivePower() {
         assertEquals(14348907, MathUtils.raiseToPower(3, 15), delta);
         assertEquals(1419857, MathUtils.raiseToPower(17, 5), delta);
         assertEquals(62748517, MathUtils.raiseToPower(13, 7), delta);
-    }
+    } // Passed
 
     @Test
     public void testBasicNegativePower() {
         assertEquals(0.5, MathUtils.raiseToPower(2, -1), delta);
         assertEquals(0.04, MathUtils.raiseToPower(5, -2), delta);
         assertEquals(0.00001525879, MathUtils.raiseToPower(2, -16), delta);
-    }
+    } // Passed
 
     @Test
     public void testComplexNegativePower() {
